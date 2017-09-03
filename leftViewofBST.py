@@ -39,5 +39,22 @@ insertToBst(tree, BST(8))
 insertToBst(tree, BST(9))
 insertToBst(tree, BST(10))
 
+'''
+              5
+             / \
+            4   6
+           /     \
+          2       7
+         /         \
+        1           8
+                     \
+                      9
+                       \
+                        10  
+ 
+
+
+'''
+
 leftView(tree, 1, [0])  # => 5,4,2,1,9,10 ,O(n)
 
