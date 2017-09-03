@@ -10,6 +10,6 @@ def isPermutation(fullString,subString):
     return True
 
 
-print isPermutation('hello','lloe') # True, O(a * b)
-print isPermutation('hello','zlloe') # False, O(a * b)
-print isPermutation('hello','elhol') # True, O(a * b)
+print isPermutation('hello','lloe') # True, O(a + b)
+print isPermutation('hello','zlloe') # False, O(a + b)
+print isPermutation('hello','elhol') # True, O(a + b)
