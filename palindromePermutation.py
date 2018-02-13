@@ -2,11 +2,11 @@ def isPalindrome(string):
     hashString = [0] * 27
     isPalindromeCount = 0
     for character in string.replace(' ','').lower():
-        hashString[ord(character)%96] = hashString[ord(character)%96] + 1
+        hashString[ord(character)%96] += 1
         if hashString[ord(character)%96]%2 != 0:
-            isPalindromeCount = isPalindromeCount + 1    
+            isPalindromeCount += 1    
         else:
-            isPalindromeCount = isPalindromeCount - 1        
+            isPalindromeCount -= 1        
     if(isPalindromeCount>1):
         return False
     else:

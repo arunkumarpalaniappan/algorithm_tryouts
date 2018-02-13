@@ -1,21 +1,20 @@
-def stringCompression(string):
+def compressString(string):
     newString = ''
     index = 0
     tempCount = 1
     while index < len(string):
-        tempindex = 1
-        while index + tempindex < len(string) and string[index] == string[index + tempindex]:
+        tempIndex = 1
+        while index+tempIndex < len(string) and string[index] == string[index+tempIndex]:
             tempCount+=1
-            tempindex+=1
+            tempIndex+=1
         newString = newString + string[index]+str(tempCount)
         tempCount = 1
-        index = index + tempindex
-
-    if len(string)<=len(newString):
+        index = index + tempIndex
+    if len(string) <= len(newString):
         return string
     else:
         return newString
 
-print stringCompression('test') # test ,O(n)
-print stringCompression('aaabbbcccaaa') # a3b3c3a3,O(n)
-print stringCompression('compression') # compression,O(n)
+print compressString('test') # test ,O(n)
+print compressString('thissusssssss') # a3b3c3a3,O(n)
+print compressString('compression') # compression,O(n)
