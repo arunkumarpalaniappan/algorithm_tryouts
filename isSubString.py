@@ -4,13 +4,14 @@ def isSubString(string1,string2):
     else:
         hashMap = [0] * 128
         for character in string1:
-            hashMap[ord(character)%128] = hashMap[ord(character)%128] + 1
+            hashMap[ord(character)] = hashMap[ord(character)] + 1
         for character in string2:
-            hashMap[ord(character)%128] = hashMap[ord(character)%128] - 1
-        for hashes in hashMap:
-            if hashes != 0:
+            if hashMap[ord(character)] <= 0:
                 return False
+            else:
+                hashMap[ord(character)] = hashMap[ord(character)] - 1
         return True
 
-print isSubString('abcd','dcca')
+print isSubString('abcd','dbca')
 print isSubString('waterbottle','erbottlewat')
+# o(n) + o(n) = 2o(n) = ~ o(n)
