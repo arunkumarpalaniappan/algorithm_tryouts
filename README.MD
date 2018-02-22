@@ -1,3 +1,3 @@
 # Algorithm_Tryouts
 
-This repo contains pythin scripts for some algorithms
+This repo contains python 2 scripts for basic algorithms
