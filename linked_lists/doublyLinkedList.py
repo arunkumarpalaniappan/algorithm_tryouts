@@ -1,5 +1,7 @@
-'''Initialise LikedList'''
+'''Initialize Doubly Linked List'''
+
 class Node:
     def __init__(self,value):
         self.value = value
+        self.prev = None
         self.next = None

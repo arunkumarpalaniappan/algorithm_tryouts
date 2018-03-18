@@ -1,12 +1,4 @@
-class Node:
-    def __init__(self,value):
-            self.value = value
-            self.next = None
-            
-def traverse(node):
-    while node != None:
-        print node.value
-        node = node.next
+from singlyLinkedList import Node
 
 if __name__ == "__main__":
     node1 = Node(1)
@@ -17,4 +9,4 @@ if __name__ == "__main__":
     node2.next = node3
     node3.next = node4
 
-    traverse(node1)
+    Node.traverse(node1)
